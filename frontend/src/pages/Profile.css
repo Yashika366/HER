@@ -1,0 +1,61 @@
+.profile-hero {
+  display: flex; align-items: flex-start; gap: 28px; margin-bottom: 28px;
+  background: linear-gradient(135deg, var(--rose-pale), var(--plum-pale));
+  flex-wrap: wrap;
+}
+.profile-avatar-big {
+  width: 88px; height: 88px; border-radius: 50%; flex-shrink: 0;
+  background: linear-gradient(135deg, var(--rose) 0%, var(--plum) 100%);
+  color: white; display: flex; align-items: center; justify-content: center;
+  font-family: 'Playfair Display', serif; font-size: 40px; font-weight: 700;
+  box-shadow: 0 8px 28px rgba(201,85,107,0.3);
+}
+.profile-hero-info { flex: 1; min-width: 200px; }
+.profile-hero-info h1 { font-size: 28px; color: var(--plum); margin-bottom: 4px; }
+.profile-hero-info > p { color: var(--text-muted); font-size: 15px; }
+.profile-bio { color: var(--charcoal); font-size: 14px; margin-top: 10px; font-style: italic; line-height: 1.6; }
+.profile-hero-meta { display: flex; gap: 24px; flex-wrap: wrap; }
+.profile-meta-item { text-align: center; }
+.profile-meta-num { font-family: 'Playfair Display', serif; font-size: 28px; font-weight: 700; color: var(--rose); }
+.profile-meta-label { font-size: 12px; color: var(--text-muted); font-weight: 500; margin-top: 2px; }
+
+.profile-tabs { display: flex; gap: 4px; background: white; border-radius: var(--radius); padding: 4px; border: 1px solid var(--border); margin-bottom: 20px; width: fit-content; flex-wrap: wrap; }
+.profile-tab { padding: 10px 22px; border: none; border-radius: calc(var(--radius) - 4px); font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 500; cursor: pointer; color: var(--text-muted); background: transparent; transition: all 0.2s; }
+.profile-tab.active { background: linear-gradient(135deg, var(--rose), var(--plum)); color: white; }
+
+.profile-section-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; }
+.profile-section-header h3 { font-size: 20px; color: var(--plum); }
+
+.profile-form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 4px; }
+@media (max-width: 640px) { .profile-form-grid { grid-template-columns: 1fr; } }
+
+.profile-view-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+@media (max-width: 768px) { .profile-view-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 480px) { .profile-view-grid { grid-template-columns: 1fr; } }
+.profile-view-item { }
+.profile-view-label { font-size: 12px; font-weight: 600; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 4px; }
+.profile-view-value { font-size: 15px; color: var(--charcoal); font-weight: 500; }
+
+.empty-state { text-align: center; padding: 48px; }
+.empty-state span { font-size: 40px; display: block; margin-bottom: 12px; }
+.empty-state p { color: var(--text-muted); }
+
+.saved-articles-list { display: flex; flex-direction: column; gap: 12px; }
+.saved-article-item { display: flex; justify-content: space-between; align-items: center; padding: 14px 16px; background: var(--cream); border-radius: var(--radius-sm); gap: 12px; }
+.saved-article-title { font-size: 15px; font-weight: 500; color: var(--plum); margin-bottom: 4px; }
+
+.settings-list { display: flex; flex-direction: column; }
+.settings-item { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--border); gap: 16px; }
+.settings-item:last-child { border-bottom: none; }
+.settings-label { font-size: 15px; font-weight: 500; color: var(--charcoal); }
+.settings-value { font-size: 13px; color: var(--text-muted); margin-top: 2px; }
+.capitalize { text-transform: capitalize; }
+
+.toggle-switch { position: relative; display: inline-block; width: 44px; height: 24px; flex-shrink: 0; }
+.toggle-switch input { opacity: 0; width: 0; height: 0; }
+.toggle-slider { position: absolute; cursor: pointer; inset: 0; background: #ccc; border-radius: 99px; transition: 0.3s; }
+.toggle-slider:before { position: absolute; content: ""; height: 18px; width: 18px; left: 3px; bottom: 3px; background: white; border-radius: 50%; transition: 0.3s; }
+.toggle-switch input:checked + .toggle-slider { background: var(--rose); }
+.toggle-switch input:checked + .toggle-slider:before { transform: translateX(20px); }
+
+.danger-zone h4 { font-size: 16px; color: #991B1B; margin-bottom: 14px; }

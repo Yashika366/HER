@@ -1,0 +1,90 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 16px 0;
+  transition: all 0.3s ease;
+  background: transparent;
+}
+.navbar.scrolled {
+  background: rgba(255,250,247,0.92);
+  backdrop-filter: blur(16px);
+  box-shadow: 0 2px 24px rgba(201,85,107,0.10);
+  padding: 12px 0;
+}
+.navbar-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+.brand-icon { font-size: 28px; }
+.brand-name {
+  display: block;
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--plum);
+  line-height: 1;
+}
+.brand-tagline {
+  display: block;
+  font-size: 10px;
+  color: var(--rose);
+  letter-spacing: 1.5px;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-top: 2px;
+}
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+}
+.nav-link {
+  padding: 8px 16px;
+  border-radius: var(--radius-pill);
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--charcoal);
+  transition: all 0.2s;
+}
+.nav-link:hover, .nav-link.active { color: var(--rose); background: var(--rose-pale); }
+.navbar-actions { margin-left: auto; display: flex; align-items: center; }
+.user-menu { display: flex; align-items: center; gap: 12px; }
+.auth-buttons { display: flex; align-items: center; gap: 8px; }
+.user-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--rose) 0%, var(--plum) 100%);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 2px 12px rgba(201,85,107,0.3);
+  text-decoration: none;
+}
+.hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
+.hamburger span { display: block; width: 22px; height: 2px; background: var(--plum); border-radius: 2px; transition: all 0.3s; }
+@media (max-width: 768px) {
+  .hamburger { display: flex; order: 3; }
+  .navbar-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background: white; flex-direction: column; padding: 16px; box-shadow: var(--shadow); }
+  .navbar-links.open { display: flex; }
+  .navbar-actions { order: 2; }
+}

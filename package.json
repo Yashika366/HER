@@ -1,0 +1,15 @@
+{
+  "name": "her-app",
+  "version": "1.0.0",
+  "description": "HER — Heal, Excel, Renown. PCOS & PCOD Support Platform",
+  "scripts": {
+    "install-all": "cd backend && npm install && cd ../frontend && npm install",
+    "dev": "concurrently \"cd backend && npm run dev\" \"cd frontend && npm start\"",
+    "start": "cd backend && npm start",
+    "seed": "cd backend && node seed.js",
+    "build": "cd frontend && npm run build"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
