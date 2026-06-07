@@ -5,7 +5,7 @@ const AuthContext = createContext();
 
 export const useAuth = () => useContext(AuthContext);
 
-axios.defaults.baseURL = 'https://her-heal-excel-renown.onrender.com/';
+axios.defaults.baseURL = '/api';
 
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
